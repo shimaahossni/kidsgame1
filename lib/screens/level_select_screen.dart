@@ -149,13 +149,13 @@ class _LevelSelectScreenState extends State<LevelSelectScreen>
                                             shadows: [
                                               Shadow(
                                                 color: Colors.white
-                                                    .withValues(alpha: 0.9),
+                                                    .withOpacity(0.9),
                                                 offset: const Offset(0, 2),
                                                 blurRadius: 0,
                                               ),
                                               Shadow(
                                                 color: Colors.black
-                                                    .withValues(alpha: 0.14),
+                                                    .withOpacity(0.14),
                                                 offset: const Offset(0, 3),
                                                 blurRadius: 4,
                                               ),
@@ -191,7 +191,7 @@ class _LevelSelectScreenState extends State<LevelSelectScreen>
                                   padding: const EdgeInsets.symmetric(
                                       horizontal: 10, vertical: 5),
                                   decoration: BoxDecoration(
-                                    color: Colors.white.withValues(alpha: 0.85),
+                                    color: Colors.white.withOpacity(0.85),
                                     borderRadius: BorderRadius.circular(18),
                                     border: Border.all(
                                       color: Colors.white,
@@ -244,14 +244,14 @@ class _LevelSelectScreenState extends State<LevelSelectScreen>
                                 padding: const EdgeInsets.symmetric(
                                     horizontal: 10, vertical: 5),
                                 decoration: BoxDecoration(
-                                  color: Colors.white.withValues(alpha: 0.85),
+                                  color: Colors.white.withOpacity(0.85),
                                   borderRadius: BorderRadius.circular(18),
                                   border: Border.all(
                                       color: Colors.white, width: 1.2),
                                   boxShadow: [
                                     BoxShadow(
                                       color: AppTheme.coinGold
-                                          .withValues(alpha: 0.25),
+                                          .withOpacity(0.25),
                                       blurRadius: 6,
                                       offset: const Offset(0, 2),
                                     ),
@@ -293,7 +293,7 @@ class _LevelSelectScreenState extends State<LevelSelectScreen>
                                   boxShadow: [
                                     BoxShadow(
                                       color: AppTheme.coinGold
-                                          .withValues(alpha: 0.45),
+                                          .withOpacity(0.45),
                                       blurRadius: 8,
                                       offset: const Offset(0, 2),
                                     ),
@@ -617,11 +617,11 @@ class _ChampionshipTrackCardState extends State<_ChampionshipTrackCard>
                   decoration: BoxDecoration(
                     color: widget.unlocked
                         ? depthColor
-                        : Colors.black.withValues(alpha: 0.35),
+                        : Colors.black.withOpacity(0.35),
                     borderRadius: BorderRadius.circular(18),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.black.withValues(alpha: 0.22),
+                        color: Colors.black.withOpacity(0.22),
                         blurRadius: 8,
                         offset: const Offset(0, 4),
                       ),
@@ -651,14 +651,14 @@ class _ChampionshipTrackCardState extends State<_ChampionshipTrackCard>
                                   Colors.white,
                                   pulse,
                                 )!
-                              : Colors.white.withValues(alpha: 0.45),
+                              : Colors.white.withOpacity(0.45),
                           width: widget.isNext ? 2.2 : 1.2,
                         ),
                         boxShadow: widget.isNext
                             ? [
                                 BoxShadow(
                                   color: const Color(0xFFFFD54F)
-                                      .withValues(alpha: 0.45 + pulse * 0.35),
+                                      .withOpacity(0.45 + pulse * 0.35),
                                   blurRadius: 10 + pulse * 6,
                                   spreadRadius: 1 + pulse * 2,
                                 ),
@@ -685,8 +685,8 @@ class _ChampionshipTrackCardState extends State<_ChampionshipTrackCard>
                               begin: Alignment.topCenter,
                               end: Alignment.bottomCenter,
                               colors: [
-                                Colors.white.withValues(alpha: 0.32),
-                                Colors.white.withValues(alpha: 0.02),
+                                Colors.white.withOpacity(0.32),
+                                Colors.white.withOpacity(0.02),
                               ],
                             ),
                           ),
@@ -722,11 +722,11 @@ class _ChampionshipTrackCardState extends State<_ChampionshipTrackCard>
                                         horizontal: 5, vertical: 2),
                                     decoration: BoxDecoration(
                                       color:
-                                          Colors.black.withValues(alpha: 0.28),
+                                          Colors.black.withOpacity(0.28),
                                       borderRadius: BorderRadius.circular(10),
                                       border: Border.all(
                                         color: Colors.white
-                                            .withValues(alpha: 0.35),
+                                            .withOpacity(0.35),
                                         width: 1.0,
                                       ),
                                     ),
@@ -795,7 +795,7 @@ class _ChampionshipTrackCardState extends State<_ChampionshipTrackCard>
                                   style: TextStyle(
                                     fontSize: 9.5,
                                     fontWeight: FontWeight.w700,
-                                    color: Colors.white.withValues(alpha: 0.88),
+                                    color: Colors.white.withOpacity(0.88),
                                     shadows: const [
                                       Shadow(
                                         color: Colors.black26,
@@ -817,7 +817,7 @@ class _ChampionshipTrackCardState extends State<_ChampionshipTrackCard>
                                   padding: const EdgeInsets.symmetric(
                                       horizontal: 6, vertical: 2.5),
                                   decoration: BoxDecoration(
-                                    color: Colors.black.withValues(alpha: 0.25),
+                                    color: Colors.black.withOpacity(0.25),
                                     borderRadius: BorderRadius.circular(8),
                                   ),
                                   child: Row(
@@ -902,11 +902,11 @@ class _ChampionshipTrackCardState extends State<_ChampionshipTrackCard>
                                         horizontal: 6, vertical: 2.5),
                                     decoration: BoxDecoration(
                                       color: const Color(0xFF10B981)
-                                          .withValues(alpha: 0.92),
+                                          .withOpacity(0.92),
                                       borderRadius: BorderRadius.circular(8),
                                       border: Border.all(
                                         color: Colors.white
-                                            .withValues(alpha: 0.5),
+                                            .withOpacity(0.5),
                                         width: 0.8,
                                       ),
                                     ),
@@ -937,7 +937,7 @@ class _ChampionshipTrackCardState extends State<_ChampionshipTrackCard>
                                         horizontal: 6, vertical: 2.5),
                                     decoration: BoxDecoration(
                                       color:
-                                          Colors.white.withValues(alpha: 0.25),
+                                          Colors.white.withOpacity(0.25),
                                       borderRadius: BorderRadius.circular(8),
                                     ),
                                     child: Row(
@@ -971,7 +971,7 @@ class _ChampionshipTrackCardState extends State<_ChampionshipTrackCard>
                         Positioned.fill(
                           child: Container(
                             decoration: BoxDecoration(
-                              color: Colors.black.withValues(alpha: 0.32),
+                              color: Colors.black.withOpacity(0.32),
                               borderRadius: BorderRadius.circular(18),
                             ),
                             child: Center(
@@ -980,10 +980,10 @@ class _ChampionshipTrackCardState extends State<_ChampionshipTrackCard>
                                     horizontal: 10, vertical: 6),
                                 decoration: BoxDecoration(
                                   color: const Color(0xFF1E293B)
-                                      .withValues(alpha: 0.88),
+                                      .withOpacity(0.88),
                                   borderRadius: BorderRadius.circular(14),
                                   border: Border.all(
-                                    color: Colors.white.withValues(alpha: 0.4),
+                                    color: Colors.white.withOpacity(0.4),
                                     width: 1.2,
                                   ),
                                   boxShadow: const [
@@ -1022,7 +1022,7 @@ class _ChampionshipTrackCardState extends State<_ChampionshipTrackCard>
                                       'Win ${widget.racesNeededToUnlock} more ${widget.racesNeededToUnlock == 1 ? "race" : "races"}',
                                       style: TextStyle(
                                         color: Colors.white
-                                            .withValues(alpha: 0.88),
+                                            .withOpacity(0.88),
                                         fontSize: 8.5,
                                         fontWeight: FontWeight.w800,
                                       ),
@@ -1064,7 +1064,7 @@ class _StarsDisplay extends StatelessWidget {
             size: 16,
             color: earned
                 ? AppTheme.coinGold
-                : Colors.white.withValues(alpha: 0.3),
+                : Colors.white.withOpacity(0.3),
             shadows: earned
                 ? const [
                     Shadow(
@@ -1127,11 +1127,11 @@ class _DriftingCloudsState extends State<_DriftingClouds>
                 width: c.size,
                 height: c.size * 0.42,
                 decoration: BoxDecoration(
-                  color: Colors.white.withValues(alpha: 0.75),
+                  color: Colors.white.withOpacity(0.75),
                   borderRadius: BorderRadius.circular(c.size),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.white.withValues(alpha: 0.4),
+                      color: Colors.white.withOpacity(0.4),
                       blurRadius: 10,
                       spreadRadius: 2,
                     ),
@@ -1180,7 +1180,7 @@ class _PulsingSunState extends State<_PulsingSun>
             color: AppTheme.coinGold,
             boxShadow: [
               BoxShadow(
-                color: AppTheme.coinGold.withValues(alpha: 0.65),
+                color: AppTheme.coinGold.withOpacity(0.65),
                 blurRadius: glow,
                 spreadRadius: glow * 0.3,
               ),

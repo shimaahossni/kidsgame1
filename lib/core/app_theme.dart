@@ -177,7 +177,7 @@ class AppTheme {
       colorScheme: base.copyWith(primary: niceOrange, secondary: niceBlue),
       scaffoldBackgroundColor: skyLight,
       textTheme: merged,
-      cardTheme: const CardThemeData(
+      cardTheme: const CardTheme(
         elevation: 0,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(22))),
@@ -334,7 +334,7 @@ class GlowBox extends StatelessWidget {
       decoration: BoxDecoration(
         boxShadow: [
           BoxShadow(
-            color: color.withValues(alpha: 0.45),
+            color: color.withOpacity(0.45),
             blurRadius: blurRadius,
             spreadRadius: spreadRadius,
           ),
@@ -470,7 +470,7 @@ class _ConfettiPainter extends CustomPainter {
       final cx = p.x * size.width;
       final cy = y * size.height;
       final angle = p.angle + t * p.spin;
-      paint.color = p.color.withValues(alpha: (1 - t * 0.6).clamp(0, 1));
+      paint.color = p.color.withOpacity((1 - t * 0.6).clamp(0, 1));
       canvas.save();
       canvas.translate(cx, cy);
       canvas.rotate(angle);
@@ -507,7 +507,7 @@ class CarPreviewPainter extends CustomPainter {
     final bodyRect =
         RRect.fromRectAndRadius(bodyTop, Radius.circular(bodyH * 0.42));
     final grad = LinearGradient(
-      colors: [car.bodyColor.withValues(alpha: .95), darken(car.bodyColor, .25)],
+      colors: [car.bodyColor.withOpacity(.95), darken(car.bodyColor, .25)],
       begin: Alignment.topCenter,
       end: Alignment.bottomCenter,
     );
@@ -537,7 +537,7 @@ class CarPreviewPainter extends CustomPainter {
         Paint()
           ..style = PaintingStyle.stroke
           ..strokeWidth = 2
-          ..color = inkPaint.color.withValues(alpha: .5));
+          ..color = inkPaint.color.withOpacity(.5));
     canvas.drawRect(spoiler, inkPaint);
     // decal
     canvas.drawCircle(

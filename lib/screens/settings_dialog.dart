@@ -119,7 +119,7 @@ class _ParentDialogState extends State<_ParentDialog> {
                   children: [
                     Container(
                       height: 46,
-                      color: Colors.redAccent.withValues(alpha: .12),
+                      color: Colors.redAccent.withOpacity(.12),
                       alignment: Alignment.center,
                       child: const Text(
                         'PRESS & HOLD TO RESET',

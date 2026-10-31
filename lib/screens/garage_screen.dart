@@ -219,7 +219,7 @@ class _GarageScreenState extends State<GarageScreen>
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
           BoxShadow(
-            color: AppTheme.coinGold.withValues(alpha: 0.5),
+            color: AppTheme.coinGold.withOpacity(0.5),
             blurRadius: 8,
             offset: const Offset(0, 3),
           ),
@@ -314,7 +314,7 @@ class _CarCardState extends State<_CarCard>
         gradient: LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
-          colors: [Colors.white, cardBg.withValues(alpha: 0.5)],
+          colors: [Colors.white, cardBg.withOpacity(0.5)],
         ),
         borderRadius: BorderRadius.circular(24),
         border: widget.selected
@@ -323,7 +323,7 @@ class _CarCardState extends State<_CarCard>
         boxShadow: [
           BoxShadow(
             color: widget.selected
-                ? car.bodyColor.withValues(alpha: 0.4)
+                ? car.bodyColor.withOpacity(0.4)
                 : Colors.black12,
             blurRadius: widget.selected ? 18 : 10,
             offset: const Offset(0, 6),
@@ -367,7 +367,7 @@ class _CarCardState extends State<_CarCard>
                             borderRadius: BorderRadius.circular(50),
                             boxShadow: [
                               BoxShadow(
-                                color: car.bodyColor.withValues(alpha: 0.5),
+                                color: car.bodyColor.withOpacity(0.5),
                                 blurRadius: 16,
                                 spreadRadius: 4,
                               ),
@@ -416,7 +416,7 @@ class _CarCardState extends State<_CarCard>
                                     : widget.owned
                                         ? AppTheme.niceBlue
                                         : AppTheme.coinGold)
-                                .withValues(alpha: 0.4),
+                                .withOpacity(0.4),
                             blurRadius: 8,
                             offset: const Offset(0, 3),
                           ),
@@ -444,7 +444,7 @@ class _CarCardState extends State<_CarCard>
               Container(
                 width: 1.5,
                 height: 160,
-                color: Colors.black.withValues(alpha: 0.08),
+                color: Colors.black.withOpacity(0.08),
               ),
 
               const SizedBox(width: 20),
@@ -513,7 +513,7 @@ class _CarCardState extends State<_CarCard>
               borderRadius: BorderRadius.circular(26),
               boxShadow: [
                 BoxShadow(
-                  color: glowColor.withValues(alpha: 0.6),
+                  color: glowColor.withOpacity(0.6),
                   blurRadius: 16,
                   spreadRadius: 2,
                 ),
@@ -525,7 +525,7 @@ class _CarCardState extends State<_CarCard>
                     -math.sin(t * 2 * math.pi)),
                 colors: [
                   glowColor,
-                  glowColor.withValues(alpha: 0.4),
+                  glowColor.withOpacity(0.4),
                 ],
               ),
             ),

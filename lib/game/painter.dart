@@ -24,22 +24,22 @@ class RacePainter extends CustomPainter {
   static final Map<int, Paint> _paintCache = {};
 
   static Paint _fill(Color c, {double? alpha}) {
-    final id = c.toARGB32() * 100 + ((alpha ?? 1) * 100).round();
+    final id = c.value * 100 + ((alpha ?? 1) * 100).round();
     final p = _paintCache[id];
     if (p != null) return p;
     final np = Paint()
-      ..color = alpha == null ? c : c.withValues(alpha: alpha)
+      ..color = alpha == null ? c : c.withOpacity(alpha)
       ..style = PaintingStyle.fill;
     _paintCache[id] = np;
     return np;
   }
 
   static Paint _stroke(Color c, double w, {double? alpha}) {
-    final id = c.toARGB32() * 100 + ((alpha ?? 1) * 100).round() + 7777000;
+    final id = c.value * 100 + ((alpha ?? 1) * 100).round() + 7777000;
     final p = _paintCache[id];
     if (p != null) return p;
     final np = Paint()
-      ..color = alpha == null ? c : c.withValues(alpha: alpha)
+      ..color = alpha == null ? c : c.withOpacity(alpha)
       ..style = PaintingStyle.stroke
       ..strokeWidth = w
       ..strokeCap = StrokeCap.round;
@@ -115,9 +115,9 @@ class RacePainter extends CustomPainter {
         begin: Alignment.topCenter,
         end: Alignment.bottomCenter,
         colors: [
-          theme.road.withValues(alpha: 0.92),
+          theme.road.withOpacity(0.92),
           theme.road,
-          theme.road.withValues(alpha: 0.95),
+          theme.road.withOpacity(0.95),
         ],
       ).createShader(roadRect));
     }
@@ -257,7 +257,7 @@ class RacePainter extends CustomPainter {
 
   void _drawTree(Canvas c, Offset at) {
     const trunkColor = Color(0xFF8B5A2B);
-    final leafA = const Color(0xFF2E7D32).withValues(alpha: 0.9);
+    final leafA = const Color(0xFF2E7D32).withOpacity(0.9);
     c.drawRect(
         Rect.fromCenter(center: at + const Offset(0, 8), width: 6, height: 20),
         _fill(trunkColor));
@@ -288,7 +288,7 @@ class RacePainter extends CustomPainter {
   void _drawRoadEdges(Canvas c, double roadTop, double roadBottom, double viewW) {
     // glowing edge = kid-friendly guidance
     final glowPaint = Paint()
-      ..color = theme.roadEdge.withValues(alpha: 0.42)
+      ..color = theme.roadEdge.withOpacity(0.42)
       ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 8);
     c.drawRect(Rect.fromLTWH(0, roadTop - 2, viewW, 6), _stroke(theme.roadEdge, 4));
     c.drawRect(Rect.fromLTWH(0, roadBottom - 4, viewW, 6), _stroke(theme.roadEdge, 4));
@@ -564,7 +564,7 @@ class RacePainter extends CustomPainter {
         Paint()..shader = LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
-          colors: [body.withValues(alpha: 0.90), body, landShade(body)],
+          colors: [body.withOpacity(0.90), body, landShade(body)],
         ).createShader(bodyRect));
     if (isPlayer) {
       // little racing stripe (accent color)

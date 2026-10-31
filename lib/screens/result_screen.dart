@@ -260,7 +260,7 @@ class _ResultScreenState extends State<ResultScreen>
                                         fontSize: 12,
                                         fontWeight: FontWeight.w700,
                                         color: Colors.white
-                                            .withValues(alpha: 0.9),
+                                            .withOpacity(0.9),
                                       ),
                                     ),
                                   ],
@@ -471,18 +471,18 @@ class _PrizeShowcaseCard extends StatelessWidget {
       height: 140,
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
-        color: Colors.white.withValues(alpha: 0.16),
+        color: Colors.white.withOpacity(0.16),
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
           color: unlockedNew
-              ? const Color(0xFFFFD54F).withValues(alpha: 0.8)
-              : Colors.white.withValues(alpha: 0.35),
+              ? const Color(0xFFFFD54F).withOpacity(0.8)
+              : Colors.white.withOpacity(0.35),
           width: unlockedNew ? 2.0 : 1.2,
         ),
         boxShadow: [
           BoxShadow(
             color: unlockedNew
-                ? const Color(0xFFFF9800).withValues(alpha: 0.3)
+                ? const Color(0xFFFF9800).withOpacity(0.3)
                 : Colors.black26,
             blurRadius: 14,
             offset: const Offset(0, 4),
@@ -563,7 +563,7 @@ class _PrizeShowcaseCard extends StatelessWidget {
                 gradient: AppTheme.gradientFor(unlockedLevel!.theme),
                 borderRadius: BorderRadius.circular(12),
                 border: Border.all(
-                  color: Colors.white.withValues(alpha: 0.5),
+                  color: Colors.white.withOpacity(0.5),
                   width: 1.2,
                 ),
                 boxShadow: const [
@@ -580,7 +580,7 @@ class _PrizeShowcaseCard extends StatelessWidget {
                     width: 32,
                     height: 32,
                     decoration: BoxDecoration(
-                      color: Colors.black.withValues(alpha: 0.3),
+                      color: Colors.black.withOpacity(0.3),
                       shape: BoxShape.circle,
                     ),
                     child: Icon(
@@ -612,7 +612,7 @@ class _PrizeShowcaseCard extends StatelessWidget {
                           style: TextStyle(
                             fontSize: 9.5,
                             fontWeight: FontWeight.w700,
-                            color: Colors.white.withValues(alpha: 0.88),
+                            color: Colors.white.withOpacity(0.88),
                           ),
                         ),
                       ],
@@ -683,7 +683,7 @@ class _PrizeShowcaseCard extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 10,
                     fontWeight: FontWeight.w600,
-                    color: Colors.white.withValues(alpha: 0.8),
+                    color: Colors.white.withOpacity(0.8),
                   ),
                 ),
               ],
@@ -706,7 +706,7 @@ class _PrizeShowcaseCard extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 9.5,
                     fontWeight: FontWeight.w700,
-                    color: Colors.white.withValues(alpha: 0.85),
+                    color: Colors.white.withOpacity(0.85),
                   ),
                 ),
               ),
@@ -752,7 +752,7 @@ class _PrizeShowcaseCard extends StatelessWidget {
           style: TextStyle(
             fontSize: 9,
             fontWeight: FontWeight.w800,
-            color: Colors.white.withValues(alpha: 0.75),
+            color: Colors.white.withOpacity(0.75),
             letterSpacing: 0.5,
           ),
         ),
@@ -786,10 +786,10 @@ class _ChampionshipProgressCard extends StatelessWidget {
       height: 140,
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(
-        color: Colors.black.withValues(alpha: 0.28),
+        color: Colors.black.withOpacity(0.28),
         borderRadius: BorderRadius.circular(20),
         border: Border.all(
-          color: Colors.white.withValues(alpha: 0.25),
+          color: Colors.white.withOpacity(0.25),
           width: 1.2,
         ),
         boxShadow: const [
@@ -838,10 +838,10 @@ class _ChampionshipProgressCard extends StatelessWidget {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 7, vertical: 2),
                 decoration: BoxDecoration(
-                  color: const Color(0xFF10B981).withValues(alpha: 0.9),
+                  color: const Color(0xFF10B981).withOpacity(0.9),
                   borderRadius: BorderRadius.circular(10),
                   border: Border.all(
-                    color: Colors.white.withValues(alpha: 0.4),
+                    color: Colors.white.withOpacity(0.4),
                     width: 0.8,
                   ),
                 ),
@@ -873,7 +873,7 @@ class _ChampionshipProgressCard extends StatelessWidget {
 
               if (isCompleted) {
                 bgColor = const Color(0xFF10B981);
-                borderColor = Colors.white.withValues(alpha: 0.6);
+                borderColor = Colors.white.withOpacity(0.6);
                 iconWidget = const Icon(
                   Icons.check_rounded,
                   color: Colors.white,
@@ -891,15 +891,15 @@ class _ChampionshipProgressCard extends StatelessWidget {
                 bgColor = const Color(0xFF3B82F6);
                 borderColor = isCurrent
                     ? const Color(0xFFFFD54F)
-                    : Colors.white.withValues(alpha: 0.4);
+                    : Colors.white.withOpacity(0.4);
                 iconWidget = const Icon(
                   Icons.play_arrow_rounded,
                   color: Colors.white,
                   size: 15,
                 );
               } else {
-                bgColor = Colors.black.withValues(alpha: 0.38);
-                borderColor = Colors.white.withValues(alpha: 0.15);
+                bgColor = Colors.black.withOpacity(0.38);
+                borderColor = Colors.white.withOpacity(0.15);
                 iconWidget = const Icon(
                   Icons.lock_rounded,
                   color: Colors.white38,
@@ -921,7 +921,7 @@ class _ChampionshipProgressCard extends StatelessWidget {
                       ? [
                           BoxShadow(
                             color: const Color(0xFFFFD54F)
-                                .withValues(alpha: 0.4),
+                                .withOpacity(0.4),
                             blurRadius: 6,
                             spreadRadius: 1,
                           ),
@@ -962,7 +962,7 @@ class _ChampionshipProgressCard extends StatelessWidget {
               fontWeight: FontWeight.w800,
               color: newlyUnlockedIndex != null
                   ? const Color(0xFFFFD54F)
-                  : Colors.white.withValues(alpha: 0.88),
+                  : Colors.white.withOpacity(0.88),
             ),
           ),
         ],
@@ -1019,7 +1019,7 @@ class _ResultButton extends StatelessWidget {
           boxShadow: [
             BoxShadow(
               color: (isHero ? Colors.greenAccent : color)
-                  .withValues(alpha: 0.45),
+                  .withOpacity(0.45),
               blurRadius: isHero ? 12 : 8,
               offset: const Offset(0, 3),
             ),

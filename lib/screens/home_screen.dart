@@ -255,11 +255,11 @@ class _DriftingCloudsState extends State<_DriftingClouds>
       width: s,
       height: s * 0.42,
       decoration: BoxDecoration(
-        color: Colors.white.withValues(alpha: .80),
+        color: Colors.white.withOpacity(.80),
         borderRadius: BorderRadius.circular(s),
         boxShadow: [
           BoxShadow(
-            color: Colors.white.withValues(alpha: 0.4),
+            color: Colors.white.withOpacity(0.4),
             blurRadius: 10,
             spreadRadius: 2,
           ),
@@ -302,7 +302,7 @@ class _PulsingSunState extends State<_PulsingSun>
             color: AppTheme.coinGold,
             boxShadow: [
               BoxShadow(
-                  color: AppTheme.coinGold.withValues(alpha: 0.7),
+                  color: AppTheme.coinGold.withOpacity(0.7),
                   blurRadius: glow,
                   spreadRadius: glow * 0.3),
             ],
@@ -355,17 +355,17 @@ class _AnimatedTitle extends StatelessWidget {
                 height: 1.0,
                 shadows: [
                   Shadow(
-                    color: Colors.white.withValues(alpha: 0.95),
+                    color: Colors.white.withOpacity(0.95),
                     offset: const Offset(0, 2),
                     blurRadius: 0,
                   ),
                   Shadow(
-                    color: Colors.black.withValues(alpha: 0.18),
+                    color: Colors.black.withOpacity(0.18),
                     offset: const Offset(0, 4),
                     blurRadius: 6,
                   ),
                   Shadow(
-                    color: Colors.black.withValues(alpha: 0.08),
+                    color: Colors.black.withOpacity(0.08),
                     offset: const Offset(0, 8),
                     blurRadius: 10,
                   ),
@@ -434,12 +434,12 @@ class _AnimatedSubtitle extends StatelessWidget {
                     height: 1.0,
                     shadows: [
                       Shadow(
-                        color: Colors.white.withValues(alpha: 0.95),
+                        color: Colors.white.withOpacity(0.95),
                         offset: const Offset(0, 2),
                         blurRadius: 0,
                       ),
                       Shadow(
-                        color: Colors.black.withValues(alpha: 0.18),
+                        color: Colors.black.withOpacity(0.18),
                         offset: const Offset(0, 3),
                         blurRadius: 4,
                       ),
@@ -516,12 +516,12 @@ class _GlowingCarBadgeState extends State<_GlowingCarBadge>
                       width: size * 1.5,
                       height: 22,
                       decoration: BoxDecoration(
-                        color: Colors.black.withValues(alpha: 0.15 + pulse * 0.08),
+                        color: Colors.black.withOpacity(0.15 + pulse * 0.08),
                         borderRadius: BorderRadius.circular(100),
                         boxShadow: [
                           BoxShadow(
                             color: widget.car.bodyColor
-                                .withValues(alpha: 0.32 + pulse * 0.18),
+                                .withOpacity(0.32 + pulse * 0.18),
                             blurRadius: 16,
                             spreadRadius: 2,
                           ),
@@ -538,7 +538,7 @@ class _GlowingCarBadgeState extends State<_GlowingCarBadge>
                         borderRadius: BorderRadius.circular(24),
                         boxShadow: [
                           BoxShadow(
-                            color: Colors.white.withValues(alpha: 0.45),
+                            color: Colors.white.withOpacity(0.45),
                             blurRadius: 10 + pulse * 6,
                           ),
                         ],
@@ -555,10 +555,10 @@ class _GlowingCarBadgeState extends State<_GlowingCarBadge>
                 padding:
                     const EdgeInsets.symmetric(horizontal: 14, vertical: 5),
                 decoration: BoxDecoration(
-                  color: Colors.white.withValues(alpha: 0.8),
+                  color: Colors.white.withOpacity(0.8),
                   borderRadius: BorderRadius.circular(20),
                   border: Border.all(
-                    color: Colors.white.withValues(alpha: 0.95),
+                    color: Colors.white.withOpacity(0.95),
                     width: 1.2,
                   ),
                   boxShadow: const [
@@ -645,12 +645,12 @@ class _StatsPill extends StatelessWidget {
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 7),
           decoration: BoxDecoration(
-            color: Colors.white.withValues(alpha: 0.82),
+            color: Colors.white.withOpacity(0.82),
             borderRadius: BorderRadius.circular(22),
             border: Border.all(color: Colors.white, width: 1.4),
             boxShadow: [
               BoxShadow(
-                color: AppTheme.coinGold.withValues(alpha: 0.3),
+                color: AppTheme.coinGold.withOpacity(0.3),
                 blurRadius: 10,
                 offset: const Offset(0, 3),
               ),
@@ -679,12 +679,12 @@ class _StatsPill extends StatelessWidget {
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 7),
           decoration: BoxDecoration(
-            color: Colors.white.withValues(alpha: 0.82),
+            color: Colors.white.withOpacity(0.82),
             borderRadius: BorderRadius.circular(22),
             border: Border.all(color: Colors.white, width: 1.4),
             boxShadow: [
               BoxShadow(
-                color: AppTheme.coinGold.withValues(alpha: 0.3),
+                color: AppTheme.coinGold.withOpacity(0.3),
                 blurRadius: 10,
                 offset: const Offset(0, 3),
               ),
@@ -858,7 +858,7 @@ class _BigButtonState extends State<BigButton> {
                   borderRadius: BorderRadius.circular(height / 2),
                   boxShadow: [
                     BoxShadow(
-                      color: depthColor.withValues(alpha: widget.isHero ? 0.55 : 0.40),
+                      color: depthColor.withOpacity(widget.isHero ? 0.55 : 0.40),
                       blurRadius: widget.isHero ? 14 : 10,
                       offset: const Offset(0, 6),
                     ),
@@ -882,7 +882,7 @@ class _BigButtonState extends State<BigButton> {
                   ),
                   borderRadius: BorderRadius.circular(height / 2),
                   border: Border.all(
-                    color: Colors.white.withValues(alpha: 0.55),
+                    color: Colors.white.withOpacity(0.55),
                     width: 1.6,
                   ),
                 ),
@@ -902,8 +902,8 @@ class _BigButtonState extends State<BigButton> {
                               begin: Alignment.topCenter,
                               end: Alignment.bottomCenter,
                               colors: [
-                                Colors.white.withValues(alpha: 0.35),
-                                Colors.white.withValues(alpha: 0.05),
+                                Colors.white.withOpacity(0.35),
+                                Colors.white.withOpacity(0.05),
                               ],
                             ),
                           ),
@@ -932,15 +932,15 @@ class _BigButtonState extends State<BigButton> {
                                 width: widget.isHero ? 42 : 34,
                                 height: widget.isHero ? 42 : 34,
                                 decoration: BoxDecoration(
-                                  color: Colors.white.withValues(alpha: 0.24),
+                                  color: Colors.white.withOpacity(0.24),
                                   shape: BoxShape.circle,
                                   border: Border.all(
-                                    color: Colors.white.withValues(alpha: 0.6),
+                                    color: Colors.white.withOpacity(0.6),
                                     width: 1.4,
                                   ),
                                   boxShadow: [
                                     BoxShadow(
-                                      color: depthColor.withValues(alpha: 0.3),
+                                      color: depthColor.withOpacity(0.3),
                                       blurRadius: 4,
                                       offset: const Offset(0, 2),
                                     ),
@@ -991,7 +991,7 @@ class _BigButtonState extends State<BigButton> {
                                         widget.subtitle!,
                                         style: TextStyle(
                                           color: Colors.white
-                                              .withValues(alpha: 0.88),
+                                              .withOpacity(0.88),
                                           fontSize: widget.isHero ? 10 : 8.5,
                                           fontWeight: FontWeight.w800,
                                           letterSpacing: 1.0,
@@ -1007,7 +1007,7 @@ class _BigButtonState extends State<BigButton> {
                             Container(
                               padding: const EdgeInsets.all(4),
                               decoration: BoxDecoration(
-                                color: Colors.white.withValues(alpha: 0.16),
+                                color: Colors.white.withOpacity(0.16),
                                 shape: BoxShape.circle,
                               ),
                               child: Icon(

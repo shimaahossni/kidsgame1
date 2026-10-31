@@ -220,7 +220,7 @@ class _RaceScreenState extends State<RaceScreen>
                 padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
                 decoration: BoxDecoration(
                   color: _heartFlash
-                      ? Colors.red.withValues(alpha: 0.7)
+                      ? Colors.red.withOpacity(0.7)
                       : Colors.black38,
                   borderRadius: BorderRadius.circular(20),
                 ),
@@ -339,7 +339,7 @@ class _RaceScreenState extends State<RaceScreen>
                         boxShadow: [
                           BoxShadow(
                             color: Colors.cyanAccent
-                                .withValues(alpha: 0.4 + _nitroGlowCtrl.value * 0.4),
+                                .withOpacity(0.4 + _nitroGlowCtrl.value * 0.4),
                             blurRadius: 16 + _nitroGlowCtrl.value * 12,
                             spreadRadius: 4,
                           ),
@@ -382,7 +382,7 @@ class _RaceScreenState extends State<RaceScreen>
   Widget _buildPauseOverlay() {
     return Positioned.fill(
       child: Container(
-        color: Colors.black.withValues(alpha: 0.65),
+        color: Colors.black.withOpacity(0.65),
         child: Center(
           child: Container(
             padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 32),
@@ -390,7 +390,7 @@ class _RaceScreenState extends State<RaceScreen>
               color: const Color(0xFF202736),
               borderRadius: BorderRadius.circular(28),
               border: Border.all(
-                  color: Colors.white.withValues(alpha: 0.25), width: 1.5),
+                  color: Colors.white.withOpacity(0.25), width: 1.5),
               boxShadow: const [
                 BoxShadow(color: Colors.black54, blurRadius: 24),
               ],
@@ -438,12 +438,12 @@ class _RaceScreenState extends State<RaceScreen>
                           ),
                           borderRadius: BorderRadius.circular(30),
                           border: Border.all(
-                            color: Colors.white.withValues(alpha: 0.45),
+                            color: Colors.white.withOpacity(0.45),
                             width: 1.4,
                           ),
                           boxShadow: [
                             BoxShadow(
-                              color: AppTheme.niceBlue.withValues(alpha: 0.5),
+                              color: AppTheme.niceBlue.withOpacity(0.5),
                               blurRadius: 12,
                               offset: const Offset(0, 4),
                             ),
@@ -488,12 +488,12 @@ class _RaceScreenState extends State<RaceScreen>
                           ),
                           borderRadius: BorderRadius.circular(30),
                           border: Border.all(
-                            color: Colors.white.withValues(alpha: 0.45),
+                            color: Colors.white.withOpacity(0.45),
                             width: 1.4,
                           ),
                           boxShadow: [
                             BoxShadow(
-                              color: AppTheme.niceGreen.withValues(alpha: 0.5),
+                              color: AppTheme.niceGreen.withOpacity(0.5),
                               blurRadius: 12,
                               offset: const Offset(0, 4),
                             ),
@@ -548,10 +548,10 @@ class _GlassChip extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
         decoration: BoxDecoration(
-          color: Colors.black.withValues(alpha: 0.45),
+          color: Colors.black.withOpacity(0.45),
           borderRadius: BorderRadius.circular(20),
           border: Border.all(
-              color: Colors.white.withValues(alpha: 0.25), width: 1),
+              color: Colors.white.withOpacity(0.25), width: 1),
         ),
         child: Row(
           mainAxisSize: MainAxisSize.min,
@@ -585,10 +585,10 @@ class _NitroBadge extends StatelessWidget {
       width: width,
       height: 44,
       decoration: BoxDecoration(
-        color: Colors.black.withValues(alpha: 0.45),
+        color: Colors.black.withOpacity(0.45),
         borderRadius: BorderRadius.circular(16),
         border:
-            Border.all(color: Colors.white.withValues(alpha: 0.25), width: 1),
+            Border.all(color: Colors.white.withOpacity(0.25), width: 1),
       ),
       padding: const EdgeInsets.all(6),
       child: Column(
